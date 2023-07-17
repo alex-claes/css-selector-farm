@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selector Farm</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<div id="app">
+    <header id="header">
+
+        <div id="form">
+            <label id="selector-label" for="selector-input">1. Select the pig named "rosie"</label>
+            <input id="selector-input" name="selector-input"  value="">
+        </div>
+        <div class="button-wrapper">
+            <button type="button" id="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                Previous
+            </button>
+        </div>
+        <div class="button-wrapper">
+            <button type="button" id="next">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </button>
+        </div>
+
+    </header>
+    <div id="structure">
+        <textarea spellcheck="false" disabled>
+<field>
+    <corn>
+    <corn class="ripe">
+    <wheat class="ripe">
+    <wheat class="ripe">
+</field>
+<dirt>
+    <pig>
+    <pig>
+    <pig id="rosie">
+</dirt>
+<water>
+    <duck>
+    <duck>
+    <duck class="sleepy">
+</water>
+<meadow>
+    <cow>
+    <cow class="sleepy">
+    <cow>
+</meadow>
+<meadow>
+    <sheep class="sleepy">
+    <sheep>
+    <sheep>
+    <sheep class="sleepy">
+</meadow>
+<meadow>
+    <chicken class="sleepy">
+    <chicken>
+    <duck>
+</meadow>
+<field>
+    <corn class="ripe">
+    <corn class="ripe">
+    <wheat>
+</field>
+<road>
+    <pig>
+</road>
+<road>
+    <chicken>
+</road>
+<road>
+    <pig>
+</road>
+<field>
+    <corn>
+    <corn>
+    <corn>
+    <corn>
+</field>
+<dirt>
+    <pig>
+    <chicken>
+</dirt>
+<water>
+    <duck id="donald">
+    <duck class="sleepy">
+    <duck>
+</water>
+        </textarea>
+    </div>
+    <iframe id="farm" src="farm.html"></iframe>
+</div>
+</body>
+</html>
