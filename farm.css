@@ -1,23 +1,23 @@
 :root {
-    --tile-size: 3.6rem;
-    --color-success: rgba(0, 255, 13, 0.8);
-    --color-error: rgba(255, 0, 0, 0.8);
-    --color: var(--color-error);
-    --color-outline: white;
+  --tile-size: 3.6rem;
+  --color-success: rgba(0, 255, 13, 0.8);
+  --color-error: rgba(255, 0, 0, 0.8);
+  --color: var(--color-error);
+  --color-outline: white;
 }
 
 html,
 body {
-    background: white !important;
-    height: 100%;
+  background: white !important;
+  height: 100%;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 html,
@@ -25,115 +25,122 @@ body,
 #farm,
 ._area,
 ._element span {
-    outline: none !important;
+  outline: none !important;
 }
 
 #farm,
 ._element span {
-    background: transparent !important;
+  background: transparent !important;
 }
 
-
-
 #farm {
-    background: transparent !important;
-    display: grid;
-    grid-template-areas:
-    "a a a a a b b c c c"
-    "a a a a a b b c c c"
-    "d d d d d b b c c c"
-    "d d d d d b b f f f"
-    "i i i i i b b f f f"
-    "l l l l h h h h h h"
-    "l l l l e e e j g g"
-    "m m m m e e e j g g"
-    "m m m m e e e j g g"
-    "k k k k k k k j g g";
+  background: transparent !important;
+  display: grid;
+  grid-template-areas:
+    'a a a a a b b c c c'
+    'a a a a a b b c c c'
+    'd d d d d b b c c c'
+    'd d d d d b b f f f'
+    'i i i i i b b f f f'
+    'l l l l h h h h h h'
+    'l l l l e e e j g g'
+    'm m m m e e e j g g'
+    'm m m m e e e j g g'
+    'k k k k k k k j g g';
 
-    grid-template-rows: repeat(auto-fit, var(--tile-size));
-    grid-template-columns: repeat(auto-fit, var(--tile-size));
+  grid-template-rows: repeat(auto-fit, var(--tile-size));
+  grid-template-columns: repeat(auto-fit, var(--tile-size));
 }
 
-
 #farm {
-    width: calc(10 * var(--tile-size));
-    height: calc(10 * var(--tile-size));
-    flex-shrink: 0;
+  width: calc(10 * var(--tile-size));
+  height: calc(10 * var(--tile-size));
+  flex-shrink: 0;
 }
 
 #farm > * {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #farm > *:nth-child(1) {
-    grid-area: a;
+  grid-area: a;
 }
 #farm > *:nth-child(2) {
-    grid-area: b;
-    flex-direction: column;
+  grid-area: b;
+  flex-direction: column;
 }
 #farm > *:nth-child(3) {
-    grid-area: c;
-    gap: 1.2rem;
+  grid-area: c;
+  gap: 1.2rem;
 }
 #farm > *:nth-child(4) {
-    grid-area: d;
+  grid-area: d;
 }
 #farm > *:nth-child(5) {
-    grid-area: e;
-    gap: 1.2rem;
+  grid-area: e;
+  gap: 1.2rem;
 }
 #farm > *:nth-child(6) {
-    grid-area: f;
+  grid-area: f;
 }
 #farm > *:nth-child(7) {
-    grid-area: g;
-    flex-direction: column;
+  grid-area: g;
+  flex-direction: column;
 }
 #farm > *:nth-child(8) {
-    grid-area: h;
+  grid-area: h;
 }
 
 #farm > *:nth-child(9) {
-    grid-area: i;
+  grid-area: i;
 }
 
 #farm > *:nth-child(10) {
-    grid-area: j;
+  grid-area: j;
 }
 
 #farm > *:nth-child(11) {
-    grid-area: k;
+  grid-area: k;
 }
 
 #farm > *:nth-child(12) {
-    grid-area: l;
+  grid-area: l;
 }
 
 #farm > *:nth-child(13) {
-    grid-area: m;
+  grid-area: m;
 }
 
 area-field._area {
-    --bg1: rgb(153, 86, 0);
-    --bg2: rgba(255, 187, 110, 0.5);
-    background-color: var(--bg1);
-    background-image: linear-gradient(
-            transparent 50%,
-            var(--bg2) 50%
-    );
-    background-size: 1rem 1rem;
+  --bg1: rgb(153, 86, 0);
+  --bg2: rgba(255, 187, 110, 0.5);
+  background-color: var(--bg1);
+  background-image: linear-gradient(transparent 50%, var(--bg2) 50%);
+  background-size: 1rem 1rem;
 }
 
 area-water._area {
-    --bg1: rgba(255, 255, 255, 0.3);
-    --bg2: rgb(146, 212, 232);
-    background: radial-gradient(circle at 25% 100%, transparent 24%, var(--bg1) 25% 29%, transparent 30%) 0 0/40px 20px, radial-gradient(circle at 25% 0%, transparent 24%, var(--bg1) 25% 29%, transparent 30%) 20px 20px/40px 20px;
-    background-color: var(--bg2);
-    /*background: radial-gradient(
+  --bg1: rgba(255, 255, 255, 0.3);
+  --bg2: rgb(146, 212, 232);
+  background: radial-gradient(
+        circle at 25% 100%,
+        transparent 24%,
+        var(--bg1) 25% 29%,
+        transparent 30%
+      )
+      0 0/40px 20px,
+    radial-gradient(
+        circle at 25% 0%,
+        transparent 24%,
+        var(--bg1) 25% 29%,
+        transparent 30%
+      )
+      20px 20px/40px 20px;
+  background-color: var(--bg2);
+  /*background: radial-gradient(
             circle at 0% 50%,
             transparent 20%,
             var(--bg1) 21%,
@@ -155,62 +162,90 @@ area-water._area {
 }
 
 area-meadow._area {
-    --bg1: #75a33d;
-    --bg2: #a2d759;
-    /*border: 0.3rem rgb(77, 51, 25) dashed;*/
-    /*background: linear-gradient(135deg, var(--bg1) 25%, transparent 25%) -0.5rem
+  --bg1: #75a33d;
+  --bg2: #a2d759;
+  /*border: 0.3rem rgb(77, 51, 25) dashed;*/
+  /*background: linear-gradient(135deg, var(--bg1) 25%, transparent 25%) -0.5rem
     0,
     linear-gradient(225deg, var(--bg1) 25%, transparent 25%) -0.5rem 0,
     linear-gradient(315deg, var(--bg1) 25%, transparent 25%),
     linear-gradient(45deg, var(--bg1) 25%, transparent 25%);
     background-color: var(--bg2);
     background-size: 1rem 1rem;*/
-    background: linear-gradient(45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 0 0/20px 20px, linear-gradient(-45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 20px 10px/20px 20px;
-    background-color: var(--bg2);
+  background: linear-gradient(
+        45deg,
+        transparent 0 23px,
+        var(--bg1) 23px 24px,
+        transparent 24px
+      )
+      0 0/20px 20px,
+    linear-gradient(
+        -45deg,
+        transparent 0 23px,
+        var(--bg1) 23px 24px,
+        transparent 24px
+      )
+      20px 10px/20px 20px;
+  background-color: var(--bg2);
 }
 
 area-dirt._area {
-    --bg1: #c5a175;
-    --bg2: #80532c;
-    /*border: 0.3rem rgb(77, 51, 25) dashed;*/
-    background:
-        radial-gradient(circle at 0.25rem 0.9rem, var(--bg1) 0.1rem, transparent 0.1rem),
-        radial-gradient(circle at 0.1rem 0.4rem, var(--bg1) 0.1rem, transparent 0.1rem),
-        radial-gradient(circle at 1rem 1rem, var(--bg1) 0.1rem, transparent 0.1rem),
-        radial-gradient(circle at 0.3rem 1.6rem, var(--bg1) 0.1rem, transparent 0.1rem),
-        radial-gradient(circle at 1.8rem 1.8rem, var(--bg1) 0.1rem, transparent 0.1rem),
-        var(--bg2);
-    background-size: 2rem 2rem;
+  --bg1: #c5a175;
+  --bg2: #80532c;
+  /*border: 0.3rem rgb(77, 51, 25) dashed;*/
+  background: radial-gradient(
+      circle at 0.25rem 0.9rem,
+      var(--bg1) 0.1rem,
+      transparent 0.1rem
+    ),
+    radial-gradient(
+      circle at 0.1rem 0.4rem,
+      var(--bg1) 0.1rem,
+      transparent 0.1rem
+    ),
+    radial-gradient(circle at 1rem 1rem, var(--bg1) 0.1rem, transparent 0.1rem),
+    radial-gradient(
+      circle at 0.3rem 1.6rem,
+      var(--bg1) 0.1rem,
+      transparent 0.1rem
+    ),
+    radial-gradient(
+      circle at 1.8rem 1.8rem,
+      var(--bg1) 0.1rem,
+      transparent 0.1rem
+    ),
+    var(--bg2);
+  background-size: 2rem 2rem;
 }
 
 area-road._area {
-    --bg1: #b8b8bd;
-    --bg2: #bfa167;
-    /*background-color: var(--bg1);*/
-    /*background-image:  repeating-linear-gradient(45deg, var(--bg2) 25%, transparent 25%, transparent 75%, var(--bg2) 75%, var(--bg2)), repeating-linear-gradient(45deg, var(--bg2) 25%, var(--bg1) 25%, var(--bg1) 75%, var(--bg2) 75%, var(--bg2));*/
-    /*background-position: 0 0, 0.6rem 0.6rem;*/
-    /*background-size: 1.2rem 1.2rem;*/
-    /*background: linear-gradient(45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(-45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px), linear-gradient(to right, transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px);*/
-    /*background-size: 1.2rem 1.2rem;*/
-    /*background-color: var(--bg2);*/
-    /*background: linear-gradient(45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 0 0/20px 20px, linear-gradient(-45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 20px 10px/20px 20px;*/
-    background-color: var(--bg2);
+  --bg1: #b8b8bd;
+  --bg2: #bfa167;
+  /*background-color: var(--bg1);*/
+  /*background-image:  repeating-linear-gradient(45deg, var(--bg2) 25%, transparent 25%, transparent 75%, var(--bg2) 75%, var(--bg2)), repeating-linear-gradient(45deg, var(--bg2) 25%, var(--bg1) 25%, var(--bg1) 75%, var(--bg2) 75%, var(--bg2));*/
+  /*background-position: 0 0, 0.6rem 0.6rem;*/
+  /*background-size: 1.2rem 1.2rem;*/
+  /*background: linear-gradient(45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(-45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px), linear-gradient(to right, transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px);*/
+  /*background-size: 1.2rem 1.2rem;*/
+  /*background-color: var(--bg2);*/
+  /*background: linear-gradient(45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 0 0/20px 20px, linear-gradient(-45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 20px 10px/20px 20px;*/
+  background-color: var(--bg2);
 }
 
-._element{
-    font-size: calc(0.6 * var(--tile-size));
-    width: calc(0.8 * var(--tile-size));
-    height: calc(0.8 * var(--tile-size));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    position: relative;
+._element {
+  font-size: calc(0.6 * var(--tile-size));
+  width: calc(0.8 * var(--tile-size));
+  height: calc(0.8 * var(--tile-size));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: relative;
 }
 
 ._element span {
-    position: absolute;
-    font-size: 70%;
+  position: absolute;
+  font-size: 70%;
 }
 
 /*._element span.food {*/
@@ -219,11 +254,11 @@ area-road._area {
 /*}*/
 
 ._element span.zzz {
-    left: 30%;
-    top: -40%;
+  left: 30%;
+  top: -40%;
 }
 
 ._element span.ripe {
-    left: 30%;
-    top: -40%;
+  left: 30%;
+  top: -40%;
 }
