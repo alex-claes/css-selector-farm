@@ -40,15 +40,18 @@ function handleSelectorInputChange() {
 
   const selector = s
     .trim()
+    .replaceAll('field', 'area-field')
+    .replaceAll('dirt', 'area-dirt')
+    .replaceAll('meadow', 'area-meadow')
+    .replaceAll('road', 'area-road')
+    .replaceAll('water', 'area-water')
     .replaceAll('chicken', 'element-chicken')
     .replaceAll('corn', 'element-corn')
     .replaceAll('cow', 'element-cow')
     .replaceAll('duck', 'element-duck')
     .replaceAll('pig', 'element-pig')
     .replaceAll('sheep', 'element-sheep')
-    .replaceAll('road', 'area-road')
-    .replaceAll('wheat', 'element-wheat')
-    .replaceAll('water', 'area-water');
+    .replaceAll('wheat', 'element-wheat');
 
   farm.contentWindow.postMessage({ selector }, '*');
   storedSelectors[`selector${currentChallenge}`] = s;

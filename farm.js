@@ -20,9 +20,9 @@ const challengeSelectors = [
   'area-road element-chicken, element-chicken.sleepy', // chicken on the road and the sleepy chicken
   'element-corn.ripe + element-wheat.ripe', // ripe wheat next to ripe corn
   '#donald + element-duck.sleepy', // sleepy duck next to donald
-  '#donald + .sleepy + element-duck',
-  'area-road element-pig, #rosie, element-chicken.sleepy, element-chicken.sleepy + element-chicken',
-  'element-corn + element-corn + element-corn',
+  '#donald + .sleepy + element-duck', // duck next to sleepy duck and donald
+  'area-road element-pig, #rosie, element-chicken.sleepy, element-chicken.sleepy + element-chicken', // pigs on the road, rosie, sleepy chicken, chicken next to sleepy chicken
+  'element-corn + element-corn + element-corn', // two corn plants at the end of the field
 ];
 
 const styleChallenge = document.querySelector('#style-challenge');
@@ -109,6 +109,8 @@ class AreaMeadow extends HTMLElement {}
 
 class AreaDirt extends HTMLElement {}
 
+class AreaRoad extends HTMLElement {}
+
 try {
   customElements.define('element-chicken', ElementChicken);
   customElements.define('element-corn', ElementCorn);
@@ -121,6 +123,7 @@ try {
   customElements.define('area-dirt', AreaDirt);
   customElements.define('area-field', AreaField);
   customElements.define('area-meadow', AreaMeadow);
+  customElements.define('area-road', AreaRoad);
   customElements.define('area-water', AreaWater);
 } catch (error) {
   console.error(error);
