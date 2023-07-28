@@ -51,9 +51,6 @@ class Animal extends HTMLElement {
 
   connectedCallback() {
     let adornment = '';
-    // if(this.classList.contains("eating")){
-    //     adornment = '<span class="food">🌿</span>';
-    // }
     if (this.classList.contains('sleepy')) {
       adornment = '<span class="zzz">💤</span>';
     }

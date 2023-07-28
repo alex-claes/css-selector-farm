@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --tile-size: 3.6rem;
   --color-success: rgba(0, 255, 13, 0.8);
@@ -140,38 +146,11 @@ area-water._area {
       )
       20px 20px/40px 20px;
   background-color: var(--bg2);
-  /*background: radial-gradient(
-            circle at 0% 50%,
-            transparent 20%,
-            var(--bg1) 21%,
-            var(--bg1) 34%,
-            transparent 35%,
-            transparent
-    ),
-    radial-gradient(
-            circle at 100% 50%,
-            transparent 20%,
-            var(--bg1) 21%,
-            var(--bg1) 34%,
-            transparent 35%,
-            transparent
-    )
-    0 -0.5rem;
-    background-color: var(--bg2);
-    background-size: 0.75rem 1rem;*/
 }
 
 area-meadow._area {
   --bg1: #75a33d;
   --bg2: #a2d759;
-  /*border: 0.3rem rgb(77, 51, 25) dashed;*/
-  /*background: linear-gradient(135deg, var(--bg1) 25%, transparent 25%) -0.5rem
-    0,
-    linear-gradient(225deg, var(--bg1) 25%, transparent 25%) -0.5rem 0,
-    linear-gradient(315deg, var(--bg1) 25%, transparent 25%),
-    linear-gradient(45deg, var(--bg1) 25%, transparent 25%);
-    background-color: var(--bg2);
-    background-size: 1rem 1rem;*/
   background: linear-gradient(
         45deg,
         transparent 0 23px,
@@ -192,7 +171,6 @@ area-meadow._area {
 area-dirt._area {
   --bg1: #c5a175;
   --bg2: #80532c;
-  /*border: 0.3rem rgb(77, 51, 25) dashed;*/
   background: radial-gradient(
       circle at 0.25rem 0.9rem,
       var(--bg1) 0.1rem,
@@ -221,14 +199,6 @@ area-dirt._area {
 area-road._area {
   --bg1: #b8b8bd;
   --bg2: #bfa167;
-  /*background-color: var(--bg1);*/
-  /*background-image:  repeating-linear-gradient(45deg, var(--bg2) 25%, transparent 25%, transparent 75%, var(--bg2) 75%, var(--bg2)), repeating-linear-gradient(45deg, var(--bg2) 25%, var(--bg1) 25%, var(--bg1) 75%, var(--bg2) 75%, var(--bg2));*/
-  /*background-position: 0 0, 0.6rem 0.6rem;*/
-  /*background-size: 1.2rem 1.2rem;*/
-  /*background: linear-gradient(45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(-45deg, transparent 49.4%, var(--bg1) 49.5% 50.5%, transparent 50.6%), linear-gradient(transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px), linear-gradient(to right, transparent 19.2px, var(--bg1) 19.2px 19.8px, transparent 19.8px);*/
-  /*background-size: 1.2rem 1.2rem;*/
-  /*background-color: var(--bg2);*/
-  /*background: linear-gradient(45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 0 0/20px 20px, linear-gradient(-45deg, transparent 0 23px, var(--bg1) 23px 24px, transparent 24px) 20px 10px/20px 20px;*/
   background-color: var(--bg2);
 }
 
@@ -247,11 +217,6 @@ area-road._area {
   position: absolute;
   font-size: 70%;
 }
-
-/*._element span.food {*/
-/*    left: -20%;*/
-/*    bottom: 20%;*/
-/*}*/
 
 ._element span.zzz {
   left: 30%;
